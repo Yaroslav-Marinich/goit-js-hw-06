@@ -7,14 +7,15 @@ let counterValue = 0;
 
 const btnIncr = document.querySelector('button[data-action="increment"]');
 const btnDecr = document.querySelector('button[data-action="decrement"]');
-
+const viewAria = document.querySelector("#value");
 btnIncr.addEventListener('click', () => {
   counterValue += 1;
+  viewAria.textContent = counterValue;
 });
 
 btnDecr.addEventListener("click", () => {
   counterValue -= 1;
+  viewAria.textContent = counterValue;
 });
 
-const viewAria = document.querySelector("#value");
-viewAria.textContent = counterValue;
+
