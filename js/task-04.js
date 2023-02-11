@@ -5,8 +5,6 @@
 
 let counterValue = 0;
 
-
-
 const btnIncr = document.querySelector('button[data-action="increment"]');
 const btnDecr = document.querySelector('button[data-action="decrement"]');
 
