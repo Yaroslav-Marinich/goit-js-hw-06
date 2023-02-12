@@ -3,6 +3,7 @@ const textLength = textInput.getAttribute("data-length");
 
 
 textInput.addEventListener("blur", (event) => {
+  const textValue = textInput.value.trim()
   textInput.className =
-    textInput.value.length === Number(textLength) ? "valid" : "invalid";
+    textValue.length === Number(textLength) ? "valid" : "invalid";
 });
