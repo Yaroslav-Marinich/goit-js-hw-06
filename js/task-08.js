@@ -4,7 +4,6 @@
 // Якщо користувач заповнив усі поля і відправив форму, збери значення полів в об'єкт, де ім'я поля буде ім'ям властивості, а значення поля - значенням властивості. Для доступу до елементів форми використовуй властивість elements.
 // Виведи об'єкт із введеними даними в консоль і очисти значення полів форми методом reset.
 
-const allData = [];
 
 document.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -21,11 +20,9 @@ document.addEventListener("submit", (event) => {
     data.email = email.value;
     data.password = password.value;
       console.log(data);
-      allData.push(data);
+     email.value = "";
+     password.value = "";
   }
-    email.value = "";
-    password.value = "";
-    console.log(allData);
 });
 
 

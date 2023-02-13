@@ -9,17 +9,13 @@ const ingredients = [
 
 const container = document.querySelector('#ingredients');
 
-// ingredients.forEach((ingredientsItem) => {
-//   const liEl = document.createElement('li');
-//   liEl.className = "item";
-//   liEl.innerHTML = ingredientsItem;
-
-//   container.append(liEl)
-// })
+const list = [];
 
 for (const element of ingredients) {
   const liEl = document.createElement('li');
   liEl.className = "item";
   liEl.innerHTML = element;
-  container.append(liEl);
+  list.push(liEl);
 }
+
+ container.append(...list);
